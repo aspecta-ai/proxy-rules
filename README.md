@@ -5,6 +5,7 @@
 ## 特色
 
 - 融合了 [ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) 主流的分流规则（如 Google、YouTube、Bilibili、Apple、AI 应用等的分流去广告等）。
+- Ai应用会自动选择非香港节点，请确保您的节点中有非香港节点。
 - 增加了 **Aspecta** 专属的自定义分流规则和局域网 IP 直连规则。
 - 自动化且合理的 `interval` 检查周期配置，避免频繁请求远端造成 Rate Limit。
 
