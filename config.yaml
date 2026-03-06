@@ -330,8 +330,8 @@ rule-providers:
     type: http
 
 rules:
-  - "RULE-SET,Aspecta,普通应用节点选择"
   - "RULE-SET,LocalAreaNetwork,全球直连"
+  - "RULE-SET,Aspecta,普通应用节点选择"
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
