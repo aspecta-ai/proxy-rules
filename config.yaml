@@ -1,10 +1,22 @@
 proxy-groups:
-  - name: 节点选择
+  - name: 普通应用节点选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
     type: select
     proxies:
       - 自动选择
       - 香港节点
+      - 台湾节点
+      - 狮城节点
+      - 日本节点
+      - 美国节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
+  - name: AI应用节点选择
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
+    type: select
+    proxies:
+      - AI自动选择
       - 台湾节点
       - 狮城节点
       - 日本节点
@@ -18,18 +30,6 @@ proxy-groups:
     include-all: true
     interval: 300
     tolerance: 50
-  - name: AI节点选择
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png
-    type: select
-    proxies:
-      - AI自动选择
-      - 台湾节点
-      - 狮城节点
-      - 日本节点
-      - 美国节点
-      - 韩国节点
-      - 手动切换
-      - DIRECT
   - name: AI自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
@@ -56,7 +56,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
     type: select
     proxies:
-      - 节点选择
+      - 普通应用节点选择
       - 自动选择
       - DIRECT
       - 手动切换
@@ -107,7 +107,7 @@ rule-providers:
   Aspecta:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/aspecta-ai/proxy-rules/amain/ruleset/Aspecta.list
+    url: https://raw.githubusercontent.com/aspecta-ai/proxy-rules/main/ruleset/Aspecta.list
     path: ./ruleset/Aspecta.list
     interval: 86400
     format: text
@@ -330,37 +330,38 @@ rule-providers:
     type: http
 
 rules:
-  - "RULE-SET,Aspecta,AI节点选择"
+  - "RULE-SET,Aspecta,普通应用节点选择"
   - "RULE-SET,LocalAreaNetwork,全球直连"
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
-  - "RULE-SET,GoogleFCM,节点选择"
+  - "RULE-SET,GoogleFCM,普通应用节点选择"
   - "RULE-SET,GoogleCN,全球直连"
   - "RULE-SET,SteamCN,全球直连"
-  - "RULE-SET,AI-MIX,AI节点选择"
-  - "RULE-SET,Bing,节点选择"
-  - "RULE-SET,OneDrive,节点选择"
-  - "RULE-SET,Microsoft,节点选择"
-  - "RULE-SET,Apple,节点选择"
-  - "RULE-SET,Telegram,节点选择"
-  - "RULE-SET,OpenAi,AI节点选择"
+  - "RULE-SET,AI-MIX,AI应用节点选择"
+  - "RULE-SET,Bing,普通应用节点选择"
+  - "RULE-SET,OneDrive,普通应用节点选择"
+  - "RULE-SET,Microsoft,普通应用节点选择"
+  - "RULE-SET,Apple,普通应用节点选择"
+  - "RULE-SET,Telegram,普通应用节点选择"
+  - "RULE-SET,OpenAi,AI应用节点选择"
   - "RULE-SET,NetEaseMusic,全球直连"
-  - "RULE-SET,Epic,节点选择"
-  - "RULE-SET,Origin,节点选择"
-  - "RULE-SET,Sony,节点选择"
-  - "RULE-SET,Steam,节点选择"
-  - "RULE-SET,Nintendo,节点选择"
-  - "RULE-SET,YouTube,节点选择"
-  - "RULE-SET,Netflix,节点选择"
-  - "RULE-SET,Bahamut,节点选择"
-  - "RULE-SET,BilibiliHMT,节点选择"
+  - "RULE-SET,Epic,普通应用节点选择"
+  - "RULE-SET,Origin,普通应用节点选择"
+  - "RULE-SET,Sony,普通应用节点选择"
+  - "RULE-SET,Steam,普通应用节点选择"
+  - "RULE-SET,Nintendo,普通应用节点选择"
+  - "RULE-SET,YouTube,普通应用节点选择"
+  - "RULE-SET,Netflix,普通应用节点选择"
+  - "RULE-SET,Bahamut,普通应用节点选择"
+  - "RULE-SET,BilibiliHMT,普通应用节点选择"
   - "RULE-SET,Bilibili,全球直连"
   - "RULE-SET,ChinaMedia,全球直连"
-  - "RULE-SET,ProxyMedia,节点选择"
-  - "RULE-SET,ProxyGFWlist,节点选择"
+  - "RULE-SET,ProxyMedia,普通应用节点选择"
+  - "RULE-SET,ProxyGFWlist,普通应用节点选择"
   - "RULE-SET,ChinaDomain,全球直连"
   - "RULE-SET,ChinaCompanyIp,全球直连"
   - "RULE-SET,Download,全球直连"
   - "GEOIP,CN,全球直连"
   - "MATCH,漏网之鱼"
+
